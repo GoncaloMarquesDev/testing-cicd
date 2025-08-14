@@ -29,6 +29,7 @@ export function Welcome() {
             </p>
             <h1>{apiKey}</h1>
             <h2>{password}</h2>
+            <h3> Testando um novo push</h3>
             <ul>
               {resources.map(({ href, text, icon }) => (
                 <li key={href}>
