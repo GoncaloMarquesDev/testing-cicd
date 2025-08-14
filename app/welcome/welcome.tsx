@@ -4,7 +4,7 @@ import logoLight from "./logo-light.svg";
 export function Welcome() {
   const apiKey = import.meta.env.VITE_MYSECRET_API_KEY;
   const password = import.meta.env.VITE_PASSWORD;
-
+  const showTitle = import.meta.env.VITE_FEATURE_FLAG_SHOW_TITLE;
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
@@ -30,6 +30,7 @@ export function Welcome() {
             <h1>{apiKey}</h1>
             <h2>{password}</h2>
             <h3> Testando um novo push</h3>
+            {showTitle ==="true" && <h1>o titulo</h1>}
             <ul>
               {resources.map(({ href, text, icon }) => (
                 <li key={href}>
